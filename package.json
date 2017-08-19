@@ -1,17 +1,45 @@
 {
   "name": "ng4-webpack-node",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build" : "del-cli public/js/app && webpack --config webpack.dev.config.js --progress --profile --watch"
   },
   "dependencies": {
+    "@angular/animations": "^4.3.5",
+    "@angular/common": "^4.3.5",
+    "@angular/compiler": "^4.3.5",
+    "@angular/compiler-cli": "^4.3.5",
+    "@angular/core": "^4.3.5",
+    "@angular/forms": "^4.3.5",
+    "@angular/http": "^4.3.5",
+    "@angular/platform-browser": "^4.3.5",
+    "@angular/platform-browser-dynamic": "^4.3.5",
+    "@angular/router": "^4.3.5",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "core-js": "^2.5.0",
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "hbs": "~4.0.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "rxjs": "^5.4.3",
+    "serve-favicon": "~2.4.2",
+    "zone.js": "^0.8.16"
+  },
+  "devDependencies": {
+    "@types/core-js": "0.9.36",
+    "@types/node": "^6.0.45",
+    "angular-router-loader": "^0.5.0",
+    "angular2-template-loader": "^0.5.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "del-cli": "^0.2.0",
+    "html-loader": "^0.4.4",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.1.4",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^4.1.0"
   }
 }
